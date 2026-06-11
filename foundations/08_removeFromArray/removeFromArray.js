@@ -1,8 +1,12 @@
-const removeFromArray = function(array, picker) {
+const removeFromArray = function(array, ...picker) {
     let result = [];
+    let options = [];
+    options = picker;
+
+    console.log(options);
 
     for (let i = 0; i < array.length; i++) {
-        if (array[i] !== picker) {
+        if (!picker.includes(array[i])) {
             result.push(array[i]);
         }
     }
