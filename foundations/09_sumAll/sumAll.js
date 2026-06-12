@@ -1,41 +1,41 @@
 const sumAll = function(one, two) {
-    if (one < 0 || two < 0) {
+    if (!Number.isInteger(one) || !Number.isInteger(two) || one < 0 || two < 0) {
         return 'ERROR';
     }
 
-    let ray = [];
-    let range = Math.abs(one - two);
-
-    // Setup ray before totalling everything up
-
-    for (let i = 0; i <= range; i++) {
-        
-    }
-
-
-
-    // Then break apart ray to add values together
-
-
+    let low = 0;
+    let high = 0;
+    let result = 0;
+    let numArray = [];
 
     if (two > one) {
-        for (let i = 0; i < dif; i++) {
-            ray.push(one + i);
-        }
-
+        low = one;
+        high = two;
+    } else {
+        low = two;
+        high = one;
     }
 
-    if (one > two) {
-        result = two;
-        for (let i = 0; i <= range; i++) {
-            result += i;
-        }
+    const range = (high - low);
 
+    console.log(range);
+    console.log(one);
+    console.log(two);
+
+    for (let i = 0; i <= range; i++) {
+        numArray.push(low);
+        low++;
     }
 
+    console.log(numArray);
 
-    console.log(ray);
+    for (let i = 0; i < numArray.length; i++) {
+        result += numArray[i];
+    }
+
+    console.log(result);
     return result;
+
 
 };
 
