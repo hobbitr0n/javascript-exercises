@@ -10,16 +10,16 @@ describe('palindromes', () => {
   test('detects palindrome with multiple words', () => {
     expect(palindromes('A car, a man, a maraca.')).toBe(true);
   });
-  // test('ignores punctuation', () => {
-  //   expect(palindromes('racecar!')).toBe(true);
-  // });
-  // test('is case insensitive', () => {
-  //   expect(palindromes('Racecar!')).toBe(true);
-  // });
-  // test('detects non-palindromes', () => {
-  //   expect(palindromes('ZZZZ car, a man, a maracaz.')).toBe(false);
-  // });
-  // test('detects non-palindromes with numbers', () => {
-  //   expect(palindromes('r3ace3car')).toBe(false);
-  // });
+  test('ignores punctuation', () => {
+    expect(palindromes('racecar!')).toBe(true);
+  });
+  test('is case insensitive', () => {
+    expect(palindromes('Racecar!')).toBe(true);
+  });
+  test('detects non-palindromes', () => {
+    expect(palindromes('ZZZZ car, a man, a maracaz.')).toBe(false);
+  });
+  test('detects non-palindromes with numbers', () => {
+    expect(palindromes('r3ace3car')).toBe(false);
+  });
 });

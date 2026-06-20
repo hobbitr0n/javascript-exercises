@@ -1,19 +1,20 @@
 const palindromes = function (word) {
 
+    const cases = word.toLowerCase();
     const filter = [" ", "", ",", ".", "!"];
     let wordless = "";
     let wordlessReversed = "";
 
-    for (let i = 0; i < word.length; i++)   {
-        if (!filter.includes(word[i]))
-            wordless += word[i];
+    for (let i = 0; i < cases.length; i++)   {
+        if (!filter.includes(cases[i]))
+            wordless += cases[i];
     }
     
     for (let i = wordless.length; i > 0; i--)   {
         wordlessReversed += wordless[i - 1];
     }
 
-    console.log(word);
+    console.log(cases);
     console.log(wordless);
     console.log(wordlessReversed);
 
